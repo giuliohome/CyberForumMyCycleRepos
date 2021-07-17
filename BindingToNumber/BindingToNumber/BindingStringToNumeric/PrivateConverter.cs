@@ -94,7 +94,7 @@ namespace BindingStringToNumeric
                         // Если она пустая, то надо её заменить на "0".
                         // Это автоматически сделает метод UndoText().
                         if (string.IsNullOrWhiteSpace(newText))
-                            ZeroText(textBox);
+                            ret = 0; //ZeroText procudes "00" triggering the converter again, better a red box
 
                         else if (!BeginScientific(newText))
                             // Возращается TextBox старое значение.

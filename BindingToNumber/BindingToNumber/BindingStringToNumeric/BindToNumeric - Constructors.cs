@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 namespace BindingStringToNumeric
@@ -8,6 +9,7 @@ namespace BindingStringToNumeric
 
         private readonly Binding bindNumber = new Binding()
         { 
+            ConverterCulture = CultureInfo.CurrentCulture,
             Mode = BindingMode.TwoWay,
             UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
         };
@@ -16,6 +18,7 @@ namespace BindingStringToNumeric
 
         private readonly PrivateMulti multi = new PrivateMulti()
         {
+            ConverterCulture = CultureInfo.CurrentCulture,
             Mode = BindingMode.TwoWay,
             Converter = PrivateConverter.Instance,
             UpdateSourceTrigger = UpdateSourceTrigger.Explicit,
