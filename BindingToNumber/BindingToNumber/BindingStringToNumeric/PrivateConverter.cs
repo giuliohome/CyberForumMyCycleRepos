@@ -75,8 +75,7 @@ namespace BindingStringToNumeric
                                 // Устанавливается флаг обновления по привязке
                                 bindingState.TextChangeSource = PropertyChangeSourceEnum.Binding;
                                 // Возращается TextBox старое значение.
-                                textBox.SelectedText = "0";
-                                textBox.Text = "0";
+                                UndoText(textBox, oldText, bindingState.Changes);
                             }
                         }
                         // Отменяется присваивание.
@@ -97,7 +96,6 @@ namespace BindingStringToNumeric
                         if (string.IsNullOrWhiteSpace(newText))
                         { //ZeroText procudes "00" triggering the converter again
                             textBox.SelectedText = "0";
-                            textBox.Text = "0";
                             return "0";
                         }
                         else if (!BeginScientific(newText))
@@ -198,11 +196,6 @@ namespace BindingStringToNumeric
                     ret = target;
 
                 Debug.WriteLine($"return: {(ret == null ? "null" : target)}");
-
-                if (ret == null)
-                {
-                    ret = 0;
-                }
 
                 // Dозвращается массив с одним элементом: полученным числом или null.
                 return new object[] { ret };

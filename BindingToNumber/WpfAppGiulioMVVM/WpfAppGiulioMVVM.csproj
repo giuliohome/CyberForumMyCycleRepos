@@ -104,10 +104,6 @@
       <Project>{3a9e1113-2453-4f89-afc2-f730690e820c}</Project>
       <Name>BindingToNumeric</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WpfCustomControls\WpfCustomControls.csproj">
-      <Project>{d93933f1-a47b-40ea-9a5d-0a50314aa39f}</Project>
-      <Name>WpfCustomControls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
