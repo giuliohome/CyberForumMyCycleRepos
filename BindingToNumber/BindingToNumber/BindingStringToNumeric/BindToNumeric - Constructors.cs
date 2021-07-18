@@ -9,7 +9,6 @@ namespace BindingStringToNumeric
 
         private readonly Binding bindNumber = new Binding()
         { 
-            ConverterCulture = CultureInfo.CurrentCulture,
             Mode = BindingMode.TwoWay,
             UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
         };
@@ -18,7 +17,6 @@ namespace BindingStringToNumeric
 
         private readonly PrivateMulti multi = new PrivateMulti()
         {
-            ConverterCulture = CultureInfo.CurrentCulture,
             Mode = BindingMode.TwoWay,
             Converter = PrivateConverter.Instance,
             UpdateSourceTrigger = UpdateSourceTrigger.Explicit,

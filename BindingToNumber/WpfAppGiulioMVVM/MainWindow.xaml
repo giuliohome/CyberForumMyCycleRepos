@@ -15,8 +15,8 @@
     <Grid>
         <TextBox Text="{bind2num:BindToNumeric Path=MyPropertyA, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="80,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Double it!" Command="{Binding Path=DoubleCmd}" HorizontalAlignment="Left" Margin="80,130,0,0" VerticalAlignment="Top" Width="76"/>
-        <TextBlock Text="{local:CultureAwareBinding Path=MyPropertyB}" HorizontalAlignment="Left" Margin="80,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock Text="{local:CultureAwareBinding Path=MyPropertyA}"  HorizontalAlignment="Left" Margin="230,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding Path=MyPropertyB}" HorizontalAlignment="Left" Margin="80,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding Path=MyPropertyA}"  HorizontalAlignment="Left" Margin="230,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
