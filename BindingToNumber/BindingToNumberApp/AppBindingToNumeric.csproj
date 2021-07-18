@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\DoubleConverterWindow.cs">
       <DependentUpon>DoubleConverterWindow.xaml</DependentUpon>
     </Compile>
